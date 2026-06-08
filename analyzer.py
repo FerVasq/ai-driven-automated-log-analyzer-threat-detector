@@ -1,7 +1,16 @@
 import os
 import json
+from pathlib import Path
+from dotenv import load_dotenv
 from openai import OpenAI
 
+# Force Python to find the .env file dynamically in the current folder
+script_dir = Path(__file__).parent
+load_dotenv(script_dir / ".env")
+
+# Initialize the OpenAI client safely
+if not os.getenv("OPENAI_API_KEY"):
+    raise ValueError("Missing OPENAI_API_KEY. Please set it in your environment or a .env file.")
 # Initialize the OpenAI client
 client = OpenAI()
 

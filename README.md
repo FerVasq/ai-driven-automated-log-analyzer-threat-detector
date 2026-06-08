@@ -11,7 +11,7 @@ This project is an automated incident response script designed to optimize threa
 
 ## Technical Skills Demonstrated
 * **Security Frameworks:** Threat Vector Classification, Input Parsing Validation
-* **Secure Coding Practices:** Decoupled Credential Management, Local Data Pre-processing
+* **Secure Coding Practices:** Decoupled Credential Management, Local Data Pre-processing, Robust Pathing
 * **Tooling & Environments:** Python, Linux/Bash environment execution, OpenAI SDK, Python-Dotenv
 
 ## Prerequisites
@@ -23,7 +23,7 @@ This project is an automated incident response script designed to optimize threa
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com
-   cd ai-log-analyzer
+   cd ai-driven-automated-log-analyzer-threat-detector
    ```
 
 2. **Install Required Dependencies:**
@@ -38,13 +38,13 @@ This project is an automated incident response script designed to optimize threa
      ```env
      OPENAI_API_KEY=your_actual_api_key_here
      ```
-   * *Note: The `.env` file is explicitly included in our `.gitignore` to prevent it from ever being committed to public version control.*
+   * *Note: The system leverages Python's `pathlib` library to dynamically locate the `.env` file relative to the execution script directory, preventing path failures across different Linux/Windows folder environments. The `.env` file is explicitly included in our `.gitignore` to prevent public version control exposure.*
 
 ## Running the Application
 1. Place your target web server log file named `logs.json` into the root directory.
 2. Execute the python pipeline from your terminal:
    ```bash
-   python log_analyzer.py
+   python analyzer.py
    ```
 
 ## Sample Input vs. AI Threat Report Output
