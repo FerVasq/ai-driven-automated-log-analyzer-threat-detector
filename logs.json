@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2026-06-08T10:00:00Z",
+    "src_ip": "192.168.1.50",
+    "request": "GET /index.html HTTP/1.1",
+    "status": 200,
+    "user_agent": "Mozilla/5.0"
+  },
+  {
+    "timestamp": "2026-06-08T10:01:22Z",
+    "src_ip": "10.0.0.15",
+    "request": "POST /login HTTP/1.1",
+    "status": 401,
+    "user_agent": "Hydra/7.5"
+  },
+  {
+    "timestamp": "2026-06-08T10:02:45Z",
+    "src_ip": "192.168.1.100",
+    "request": "GET /admin/select+*+from+users HTTP/1.1",
+    "status": 404,
+    "user_agent": "sqlmap/1.4"
+  } 
+]
