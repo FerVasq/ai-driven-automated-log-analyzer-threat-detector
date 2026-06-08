@@ -22,8 +22,7 @@ This project is an automated incident response script designed to optimize threa
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com
-   cd ai-driven-automated-log-analyzer-threat-detector
+   git clone https://github.com/FerVasq/ai-driven-automated-log-analyzer-threat-detector
    ```
 
 2. **Install Required Dependencies:**
